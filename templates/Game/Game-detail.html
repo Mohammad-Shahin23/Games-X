@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ game.Game }}</h2>
+<h2>player: {{ game.player.first_name }} {{ game.player.last_name }}</h2>
+<p>{{ game.Discription }}</p>
+<a href="{% url 'Game_update' game.pk %}">+ Update game</a>
+<a href="{% url 'Game_delete' game.pk %}">+ Delete game</a>
+
+{% endblock content %}
